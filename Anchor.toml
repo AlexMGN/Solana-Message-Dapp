@@ -1,0 +1,19 @@
+[features]
+seeds = false
+safety_checks = true
+
+[programs.localnet]
+messagelearn = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+
+[programs.devnet]
+messagelearn = "7PcDh1RrL4FZUEhrA8kiAMXStVXRwMEwFvLb5X4oEWX6"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "devnet"
+wallet = "/Users/alexandremignon/.config/solana/dev.json"
+
+[scripts]
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"
