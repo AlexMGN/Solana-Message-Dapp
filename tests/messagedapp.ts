@@ -53,11 +53,11 @@ describe('Message Contract', () => {
     //console.log("Your transaction signature", tx);
   });
 
-  /*it('Get All Messages!', async () => {
+  it('Get All Messages!', async () => {
     console.log("All messages", await program.account.message.all());
-  });*/
+  });
 
-  /*it('Get All Messages for an Account!', async () => {
+  it('Get All Messages for an Account!', async () => {
     const messagesForOneWallet = await program.account.message.all([{
       memcmp: {
         offset: 8, // Starting from the 42nd byte.
@@ -66,7 +66,7 @@ describe('Message Contract', () => {
     }]);
 
     console.log("All messages for one account", messagesForOneWallet)
-  });*/
+  });
 
   it('It Delete a Message!', async () => {
     const tx = await program.methods.deleteMessage()
