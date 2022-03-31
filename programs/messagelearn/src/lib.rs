@@ -31,6 +31,10 @@ pub mod messagelearn {
             content: message_content
         };
 
+        if ctx.accounts.message_account.content.chars().count() > 280 {
+            return Err(error!(ErrorCode::ContentTooLong));
+        }
+
         msg!("Autheur du message: {}", ctx.accounts.message_account.author);
         msg!("Nouveau message: {}", ctx.accounts.message_account.content);
 
